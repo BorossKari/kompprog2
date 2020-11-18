@@ -1,0 +1,36 @@
+A winchester főbb jellemzői: zárt, ténylegesen merev, kompakt csomagolás, pára és pormentes, bírja a nagy írássűrűséget. Általában nem egy, hanem több egymással párhuzamos lemezből áll, közöttük mint fésűsor közlekednek a fejek. Átlagos elérési idő (1 fizikai szektort mennyi idő alatt talál meg) általában 7-8 ms.
+A háttértároló perifériákra két fő okból van szükség:
+        az operatív memória kapacitásának kibővítése cserélhető adathordozókkal elvileg végtelenig,
+az adatok a gép kikapcsolása után bármilyen hosszú ideig
+A mágneses jelrögzítés elve, hogy egy nem mágnesezhető mechanikai hordozóanyagra mágnesezhető réteget visznek fel. A mágnesezhető réteg úgy tekinthető, mintha elemi mágnesekből állna, amelyek egy tekercs előtt haladnak el. Ha a tekercsbe megfelelő áramot vezetünk, az elemi mágnesek egyik vagy másik irányba mágneseződnek attól függően, hogy milyen irányú az áram a tekercsben. Az elemi mágnesek ezt az állapotukat hosszú ideig megtartják. Ha ezután a mágneses adathordozót ismét elmozdítjuk egy tekercs előtt, amelyben természetesen nem folyik áram, akkor ezek az elemi mágnesek elhaladva a tekercs előtt, abban feszültséget hoznak létre, indukálnak. Ez az indukált feszültség a rögzített jelnek felel meg, amit a gépben megfelelően felerősítve és átalakítva vezérlésre használhatunk.
+
+Jellemzői:
+
+Lemezszám: 1-12 db. Alsó indexlemez (szervó v. beállító lemez feladata fejszabályozás).
+Cilinder: az adattároló lemezfelület azonos számú sávjai
+Cluster: A FAT táblában a foglaltság jelzése clusterenként történik. A cluster az a legkisebb tárterület, amit a DOS kezel. Egy cluster 1..8 szektor, azaz 0.5..4 kB. (-> egy nagykapacitású fix lemezen egy 20 B-os program ugyanannyi helyet foglal el, mint egy pl. 3.8 KB-os.)
+Partíció: Egy merevlemezzel rendelkező pc-n max. 4 különböző operációs rendszer lehet. Minden operációs rendszer külön a számára kijelölt területen vagy másnéven partíción helyezkedik el. Az egyes operációs rendszerek csak a saját partíciójukat tudják kezelni. A számítógép bekapcsoláskor azt a partíciót indítja, amelyik aktív állapotban van. Lehetőség van arra is hogy egy operációs rendszer használja az egész területet. A particiókra vonatkozó információ, az 1.szektor, 1. fej. 1.sávján található. A partíciós tábla a bootrekord része. A DOS partíció mérete 3.3-ig max. 32 MB. (Ok: a FAT tábla 16 bites)
+CD: Nagy tárolókapacitás jellemzi
+
+Fajtái:
+
+A CD-k – fizikai felépítésük szerint – a következők szerint csoportosíthatók:
+
+préseléssel készült (csak olvasható)
+CD-R (írható)
+CD-RW (újraírható, azaz letörölhető és rá új adatok írhatók)
+A tartalom alapján a következő fajták léteznek:
+
+CD-DA (CD-Digital Audio, hanganyag tárolására)
+CD+G (CD+Graphics)
+CD+MIDI
+CD Text (a hanganyag mellett szöveges album és száminformációkat is tartalmaz(hat))
+CD-Extra (más néven Cd Plus, hanganyagot és – általában ehhez kapcsolódó – számítógépes adatokat is tartalmaz)
+HDCD (High Definition CD)
+CD-ROM (adatok tárolására)
+CD-ROM/XA
+CD-i (interaktív CD)
+PhotoCD
+VideoCD
+SVCD (Super VideoCD)
+Gyártása: Egy polírozott üveglemezre fotólakkot visznek fel. Az információt digitálisan modulált lézerfénnyel rögzítik. Előhívás – maratás -> az információnak megfelelő pitek. -> galvanikus úton kópia – a sajtoláshoz. A nyomott lemezeket tükröző alumíniumréteggel vonják be. Kiolvasás a másik oldalról -> gödör helyett kiemelkedések. -> a visszaverődő lézersugár a kiemelkedésről másképp verődik vissza.
