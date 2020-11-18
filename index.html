@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html id="top">
 <head>
     <meta charset="utf-8">
     <title>Háttértárak IT kidolgozott tétel</title>
@@ -9,20 +9,20 @@
 <body>
     <main>
     <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-  <a class="navbar-brand">Menü</a>
+  <a class="navbar-brand">Ugrás</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div1 class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#cim">Kezdőlap</a>
+        <a class="nav-link" href="#top">Az oldal elejére</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="4_Kombinatorika.html">Kombinatorikai fogalmak</a>
+        <a class="nav-link" href="#hdd">HDD-k jellemzői</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="5_Forrasok.html">Források</a>
+        <a class="nav-link" href="#cdk">Optikai lemezek jellemzése</a>
       </li>
     </ul>
   </div1>
@@ -30,14 +30,55 @@
     <div>
         <h3 id="cim">Nagy kapacitású háttértárolók. A merevlemezes és az optikai tárolók főbb jellemzői, fajtái és összehasonlításuk. (Hard Disk, CD-ROM)</h3>
         <p id="cim">Kidolgozott Információtechnológiai érettségi tétel</p>
-        <header>A mágneses háttértárak jellemzése</header>
-        <img src="merevlemez.jpg" id="hdd">
+        <header>Mágneses háttértárak</header>
+        <img src="képek/merevlemez.jpg" id="jobbkep">
         <p>A winchester főbb jellemzői: zárt, ténylegesen merev, kompakt csomagolás, pára és pormentes, bírja a nagy írássűrűséget. Általában nem egy, hanem több egymással párhuzamos lemezből áll, közöttük mint fésűsor közlekednek a fejek. Átlagos elérési idő (1 fizikai szektort mennyi idő alatt talál meg) általában 7-8 ms.</p>
+        <hr>
         <p>A háttértároló perifériákra két fő okból van szükség:</p>
         <ul>
             <li>az operatív memória kapacitásának kibővítése cserélhető adathordozókkal elvileg végtelenig,</li>
             <li>az adatokat a gép kikapcsolása után bármilyen hosszú ideig képes tárolni, áramellátás nélkül is.</li>
         </ul>
+        <hr>
+        <img src="képek/felepites.jpg" id="balkep">
+        <p>A mágneses jelrögzítés elve, hogy egy nem mágnesezhető mechanikai hordozóanyagra mágnesezhető réteget visznek fel. A mágnesezhető réteg úgy tekinthető, mintha elemi mágnesekből állna, amelyek egy tekercs előtt haladnak el. Ha a tekercsbe megfelelő áramot vezetünk, az elemi mágnesek egyik vagy másik irányba mágneseződnek attól függően, hogy milyen irányú az áram a tekercsben. Az elemi mágnesek ezt az állapotukat hosszú ideig megtartják. Ha ezután a mágneses adathordozót ismét elmozdítjuk egy tekercs előtt, amelyben természetesen nem folyik áram, akkor ezek az elemi mágnesek elhaladva a tekercs előtt, abban feszültséget hoznak létre, indukálnak. Ez az indukált feszültség a rögzített jelnek felel meg, amit a gépben megfelelően felerősítve és átalakítva vezérlésre használhatunk.</p>
+        <p id="hdd">A bal oldalon látható kép a merevlemez fizikai feléítését magyarázza el.</p>
+        <hr>
+        <header>A mágneses háttértárak legfőbb jellemzői</header>
+        <ul>
+            <li><xd>Lemezszám:</xd> 1-12 db. Alsó indexlemez (szervó v. beállító lemez feladata fejszabályozás).</li>
+            <li><xd>Cilinder:</xd> az adattároló lemezfelület azonos számú sávjai</li>
+            <li><xd>Cluster:</xd> A FAT táblában a foglaltság jelzése clusterenként történik. A cluster az a legkisebb tárterület, amit a DOS kezel. Egy cluster 1..8 szektor, azaz 0.5..4 kB. (-> egy nagykapacitású fix lemezen egy 20 B-os program ugyanannyi helyet foglal el, mint egy pl. 3.8 KB-os.)</li>
+            <li><xd>Partíció:</xd> Egy merevlemezzel rendelkező pc-n max. 4 különböző operációs rendszer lehet. Minden operációs rendszer külön a számára kijelölt területen vagy másnéven partíción helyezkedik el. Az egyes operációs rendszerek csak a saját partíciójukat tudják kezelni. A számítógép bekapcsoláskor azt a partíciót indítja, amelyik aktív állapotban van. Lehetőség van arra is hogy egy operációs rendszer használja az egész területet. A particiókra vonatkozó információ, az 1.szektor, 1. fej. 1.sávján található. A partíciós tábla a bootrekord része. A DOS partíció mérete 3.3-ig max. 32 MB. (Ok: a FAT tábla 16 bites)</li>
+        </ul>
+        <hr id="cdk">
+        <header>CD-k jellemzése</header>
+        <p class="cdlist">A CD-k gyártása, működési elve</p>
+        <p>Az írható CD-ken az információt a polikarbonát hordozó alatt elhelyezkedő nagyon vékony, filmszerű szerves festékrétegbe égetik be. Erre a célra infravörös (780 nm-es) lézerdiódákat alkalmaznak. Ezek fényét fókuszálva a festékrétegben maradandó, kis tűszerű kráterek (pitek), elváltozások keletkeznek. Az információ kiolvasása szintén lézerfény segítségével történik, csak csökkentett energiaszinttel. A lemez információhordozó-rétegéről visszaverődő fényt az optoelektronikai fejegység érzékeli és dolgozza fel. Amikor az olvasófej egy pit felett van, akkor csökkent fényintenzitást érzékel, mivel a fókuszált lézerfény pitről visszaverődő része gyengítő interferenciába lép a környező landról visszaverődő fénnyel. Land fölött a fény nagymértékben visszaverődik. A CD kódrendszerében a pit-land vagy land-pit átmenet (azaz a fényerősség hirtelen változása) jelenti az 1-et, az átmenet hiánya (amikor nem változik a visszavert fény mennyisége) pedig a 0-t.</p>
+        <hr>
+        <header>CD-k csoportosítása</header>
+        <p>A CD-ket többféle szempont alapján lehet csoportosítani.</p>
+        <p class="cdlist">Fizikai felépítés szerint:</p>
+            <ul>
+                <li>préseléssel készült (csak olvasható)</li>
+                <li>CD-R (írható)</li>
+                <li>CD-RW (újraírható, azaz letörölhető és rá új adatok írhatók)</li>
+            </ul>
+        <p class="cdlist">Tárolható adat szerint:</p>
+            <ul>
+                <li>CD-DA (CD-Digital Audio, hanganyag tárolására)</li>
+                <li>CD+G (CD+Graphics)</li>
+                <li>CD+MIDI</li>
+                <li>CD Text (a hanganyag mellett szöveges album és száminformációkat is tartalmaz(hat))</li>
+                <li>CD-Extra (más néven Cd Plus, hanganyagot és – általában ehhez kapcsolódó – számítógépes adatokat is tartalmaz)</li>
+                <li>HDCD (High Definition CD)</li>
+                <li>CD-ROM (adatok tárolására)</li>
+                <li>CD-ROM/XA</li>
+                <li>CD-i (interaktív CD)</li>
+                <li>PhotoCD</li>
+                <li>VideoCD</li>
+                <li>SVCD (Super VideoCD)</li>
+            </ul>
     </div>
 </main>
     <script src="javascript.js"></script>

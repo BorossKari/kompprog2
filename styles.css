@@ -9,10 +9,32 @@ div{
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 10px;
+    padding-bottom: 80px;
+}
+header{
+    color: orangered;
+    font-size: 25px;
 }
 img{
-    max-width: 50%;
+    max-width: 40%;
 }
-#hdd{
+#jobbkep{
     float: right;
+}
+#balkep{
+    float: left;
+}
+xd{
+    font-size: 20px;
+    color: brown;
+}
+.cdlist{
+    font-size: 18px;
+    color: brown;
+}
+#dupla{
+    width: 200%
+}
+#cdk{
+    padding-bottom: 40px;
 }
