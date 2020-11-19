@@ -8,7 +8,7 @@
 </head>
 <body>
     <main>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <a class="navbar-brand">Ugrás</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -19,10 +19,13 @@
         <a class="nav-link" href="#top">Az oldal elejére</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#hdd">HDD-k jellemzői</a>
+        <a class="nav-link" href="#cdk">Optikai lemezek jellemzése</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#cdk">Optikai lemezek jellemzése</a>
+        <a class="nav-link" href="#forras">Források</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#pontozolap">Érettségit imitáló pontozólap</a>
       </li>
     </ul>
   </div1>
@@ -80,13 +83,38 @@
                 <li>VideoCD</li>
                 <li>SVCD (Super VideoCD)</li>
             </ul>
-        <header>Források</header>
+        <header id="forras">Források</header>
         <ul>
             <li><a href="https://erettsegi.com/tetelek/informatika/nagy-kapacitasu-hattertarolok-a-merevlemezes-es-az-optikai-tarolok-fobb-jellemzoi-fajtai-es-osszehasonlitasuk/" target="_blank">érettségi.com</a>: forrásanyag a tartalomhoz</li>
             <li><a href="https://hu.wikipedia.org/wiki/CD" target="_blank">Wikipédia</a>: Forrásanyag a CD-khez</li>
             <li><a href="https://hu.wikipedia.org/wiki/Merevlemez#/media/F%C3%A1jl:Hdd_od_srodka.jpg" target="_blank">Merevlemez kép</a></li>
             <li><a href="https://people.inf.elte.hu/bobsaai/merevlemez/img/abra.jpg" target="_blank">Merevlemez felépítése</a></li>
         </ul>
+    </div>
+    <div id="pontozolap">
+        <header>Érettségi pontozólap</header>
+        <p>Itt meg tudsz adni egy feltételes informatika érettségi eredményt, és a pontszámok alapján megkapod, hányast kapnál (vagy fogsz kapni  ha ezek valódi eredmények).</p>
+        <form>
+                <h5>Írásbelin elért pontok (max. 120 pont): </h5>
+            <label>Szövegszerkesztés:</label><input type="number" min="0" max="40" placeholder="pont" required><br>
+            <label>Prezentáció, grafika, weblapszerkesztés: </label><input type="number" min="0" max="30" placeholder="pont" required><br>
+            <label>Táblázatkezelés:</label><input type="number" min="0" max="30" placeholder="pont" required><br>
+            <label>Adatbázis-kezelés:</label><input type="number" min="0" max="20" placeholder="pont" required><br>
+                <h5>Szóbelin elért pontok:</h5>
+            <label>Tartalom:</label><input type="number" min="0" max="12" placeholder="pont" required><br>
+            <label>Logikai felépítés:</label><input type="number" min="0" max="6" placeholder="pont" required><br>
+            <label>Kifejezőképesség, szaknyelv használata:</label><input type="number" min="0" max="6" placeholder="pont" required><br>
+            <label>Kommutatív képesség:</label><input type="number" min="0" max="6" placeholder="pont" required><br>
+            <button type="submit" onclick="eredmeny()">Számolás</button>
+        </form>
+        <hr>
+        <h5>Összesített pontszámok</h5>
+        <label>Írásbelin elért pont:</label><label id="ossziras"></label><br>
+        <label>Szóbelin elért pont:</label><label id="osszszo"></label><br>
+        <label>Összesített pontszám:</label><label id="fullossz"></label><br>
+        <label>Összes elért pont %-ban:</label><label id="fullszaz"></label>
+        <p>És az, amire mindenki várt...</p>
+        <label id="drama">Az érettségire kapott jegyed:</label><label id="jegy"></label>
     </div>
 </main>
     <script src="javascript.js"></script>

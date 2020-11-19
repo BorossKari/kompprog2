@@ -9,7 +9,7 @@ div{
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 10px;
-    padding-bottom: 80px;
+    padding-bottom: 30px;
 }
 header{
     color: orangered;
@@ -37,4 +37,11 @@ xd{
 }
 #cdk{
     padding-bottom: 40px;
+}
+#pontozolap{
+    padding-bottom: 40px;
+}
+#drama{
+    font-size: 30px;
+    color: red;
 }
