@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html id="top">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Háttértárak IT kidolgozott tétel</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -94,30 +95,32 @@
     <div id="pontozolap">
         <header>Érettségi pontozólap</header>
         <p>Itt meg tudsz adni egy feltételes informatika érettségi eredményt, és a pontszámok alapján megkapod, hányast kapnál (vagy fogsz kapni  ha ezek valódi eredmények).</p>
-        <form>
+        <form onsubmit="return false">
                 <h5>Írásbelin elért pontok (max. 120 pont): </h5>
-            <label>Szövegszerkesztés:</label><input type="number" min="0" max="40" placeholder="pont" required><br>
-            <label>Prezentáció, grafika, weblapszerkesztés: </label><input type="number" min="0" max="30" placeholder="pont" required><br>
-            <label>Táblázatkezelés:</label><input type="number" min="0" max="30" placeholder="pont" required><br>
-            <label>Adatbázis-kezelés:</label><input type="number" min="0" max="20" placeholder="pont" required><br>
+            <label>Szövegszerkesztés:</label><input type="number" min="0" max="40" placeholder="pont" id="szovszerk" name="szovszerk" required><br>
+            <label>Prezentáció, grafika, weblapszerkesztés: </label><input type="number" min="0" max="30" placeholder="pont" id="webl" name="webl" required><br>
+            <label>Táblázatkezelés:</label><input type="number" min="0" max="30" placeholder="pont" id="tablk" name="tablk" required><br>
+            <label>Adatbázis-kezelés:</label><input type="number" min="0" max="20" placeholder="pont" id="adatb" name="adatb" required><br>
                 <h5>Szóbelin elért pontok:</h5>
-            <label>Tartalom:</label><input type="number" min="0" max="12" placeholder="pont" required><br>
-            <label>Logikai felépítés:</label><input type="number" min="0" max="6" placeholder="pont" required><br>
-            <label>Kifejezőképesség, szaknyelv használata:</label><input type="number" min="0" max="6" placeholder="pont" required><br>
-            <label>Kommutatív képesség:</label><input type="number" min="0" max="6" placeholder="pont" required><br>
+            <label>Tartalom:</label><input type="number" min="0" max="12" placeholder="pont" id="tart" name="tart" required><br>
+            <label>Logikai felépítés:</label><input type="number" min="0" max="6" placeholder="pont" id="felep" name="felep" required><br>
+            <label>Kifejezőképesség, szaknyelv használata:</label><input type="number" min="0" max="6" placeholder="pont" id="szakny" name="szakny" required><br>
+            <label>Kommutatív képesség:</label><input type="number" min="0" max="6" placeholder="pont" id="kommk" name="kommk" required><br>
             <button type="submit" onclick="eredmeny()">Számolás</button>
         </form>
         <hr>
         <h5>Összesített pontszámok</h5>
         <label>Írásbelin elért pont:</label><label id="ossziras"></label><br>
+        <label>Írásbeli %-a:</label><label id="irszaz"></label><br>
         <label>Szóbelin elért pont:</label><label id="osszszo"></label><br>
+        <label>Szóbeli %-a:</label><label id="szoszaz"></label><br>
         <label>Összesített pontszám:</label><label id="fullossz"></label><br>
         <label>Összes elért pont %-ban:</label><label id="fullszaz"></label>
         <p>És az, amire mindenki várt...</p>
-        <label id="drama">Az érettségire kapott jegyed:</label><label id="jegy"></label>
+        <label class="drama">Az érettségire kapott jegyed:</label><label class="drama" id="jegy"></label>
     </div>
 </main>
-    <script src="javascript.js"></script>
+    <script src="scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
