@@ -25,7 +25,40 @@ function eredmeny(){
     document.getElementById('fullossz').innerHTML = osszpont;
     document.getElementById('fullszaz').innerHTML = osszfix+"%";
     //innentől jegyszámolás
-    
+    var jegy;
+    var hiba = 0, hibat=["Gratulálunk. A mondat lejtését, hangnemét te döntsd el a jegyed alapján.", "Hibás eredmény."];
+    if(ir100<10 || szo100<10)
+        {
+            jegy=1;
+        }
+    else if(osszfix<=100 && osszfix>=80)
+        {
+            jegy = 5;
+        }
+    else if(osszfix<80 && osszfix>=60)
+        {
+            jegy = 4;
+        }
+    else if(osszfix<60 && osszfix>=40)
+        {
+            jegy = 3;
+        }
+    else if(osszfix<40 && osszfix>=25)
+        {
+            jegy = 2;
+        }
+    else if(osszfix<25 && osszfix>=0)
+        {
+            jegy = 1;
+        }
+    else
+        {
+            jegy = "hiba";
+            hiba = 1;
+            alert("Írj be helyes eredményt!");
+        }
+    document.getElementById('jegy1').innerHTML = jegy;
+    document.getElementById('gratula').innerHTML = hibat[hiba];
     return false;
     e.preventDefault();
 }
